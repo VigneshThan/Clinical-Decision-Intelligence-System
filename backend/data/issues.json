@@ -1,0 +1,72 @@
+[
+  {
+    "issue_id": "INC-7001",
+    "test_id": "T101",
+    "module": "Medication",
+    "summary": "Unsigned medication orders can be submitted",
+    "status": "open",
+    "requirement_id": "REQ-MED-101",
+    "requirement": "Physician signature required before submission",
+    "severity": "critical",
+    "root_cause": "Validation rule misconfiguration after workflow update",
+    "clinical_impact": "Unsafe medication orders may proceed without physician sign-off",
+    "regression": true,
+    "recommended_action": "Restore blocking validation before the next release candidate"
+  },
+  {
+    "issue_id": "INC-7002",
+    "test_id": "T102",
+    "module": "Documentation",
+    "summary": "Patient notes fail to save intermittently",
+    "status": "open",
+    "requirement_id": "REQ-DOC-201",
+    "requirement": "Patient notes must persist reliably",
+    "severity": "high",
+    "root_cause": "Backend API timeout",
+    "clinical_impact": "The patient chart may be missing recent clinical observations",
+    "regression": false,
+    "recommended_action": "Resolve timeout behavior and verify reliable note persistence"
+  },
+  {
+    "issue_id": "INC-7003",
+    "test_id": "T103",
+    "module": "Orders",
+    "summary": "Duplicate orders are created after a single submission",
+    "status": "open",
+    "requirement_id": "REQ-ORD-301",
+    "requirement": "Orders must be submitted once per action",
+    "severity": "critical",
+    "root_cause": "Missing idempotency handling",
+    "clinical_impact": "Duplicate treatments or repeated clinical tasks may be performed",
+    "regression": false,
+    "recommended_action": "Implement idempotency handling and re-test order submission safeguards"
+  },
+  {
+    "issue_id": "INC-7004",
+    "test_id": "T104",
+    "module": "Billing",
+    "summary": "Incorrect CPT code mapping is applied",
+    "status": "open",
+    "requirement_id": "REQ-BIL-401",
+    "requirement": "Correct billing code mapping required",
+    "severity": "medium",
+    "root_cause": "Outdated mapping table",
+    "clinical_impact": "Coding accuracy drops, increasing denial risk and revenue leakage",
+    "regression": false,
+    "recommended_action": "Refresh billing code mappings and validate claim output"
+  },
+  {
+    "issue_id": "INC-7005",
+    "test_id": "T105",
+    "module": "Medication",
+    "summary": "Known allergy alerts are not triggered",
+    "status": "open",
+    "requirement_id": "REQ-MED-108",
+    "requirement": "System must alert for known allergies",
+    "severity": "critical",
+    "root_cause": "Regression after alert system refactor",
+    "clinical_impact": "Patients may receive medication despite a known allergy, creating life-threatening risk",
+    "regression": true,
+    "recommended_action": "Treat as release blocker and restore alerting before further rollout"
+  }
+]
