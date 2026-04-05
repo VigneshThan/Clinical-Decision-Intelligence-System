@@ -187,3 +187,11 @@ This project is meant to demonstrate more than frontend or backend implementatio
 - root cause analysis
 - automation thinking
 - product analyst reasoning in a clinical environment
+
+<img width="1710" height="1107" alt="Screenshot 2026-04-04 at 11 33 42 PM" src="https://github.com/user-attachments/assets/66c02ee9-4432-4b83-9d1a-971c0be4861e" />
+<img width="3420" height="2214" alt="image" src="https://github.com/user-attachments/assets/2330107d-eb36-4014-b00d-52274d27bd6c" />
+<img width="3420" height="2214" alt="image" src="https://github.com/user-attachments/assets/79b2cd1a-49a5-4082-ae61-8cc4b3f86235" />
+<img width="3420" height="2214" alt="image" src="https://github.com/user-attachments/assets/46b6464b-3c62-4b5a-b5b9-bea0a039c8df" />
+
+
+
